@@ -4,7 +4,8 @@
 
 function hello() {
 
-  // WRITE YOUR EXERCISE 1 CODE HERE
+  var div = document.getElementById("output1");
+  div.innerHTML = "Hello, AP Computer Science Principles!";
 
   ////////////////// DO NOT MODIFY
   check("hello"); // DO NOT MODIFY
