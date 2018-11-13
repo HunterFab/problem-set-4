@@ -92,10 +92,13 @@ function inches() {
   // need to do. Please do not modify the value of input.
 
   ////////////////////// DO NOT MODIFY
-  let inches = input; // DO NOT MODIFY
+  let inches = input - (feet * 12); // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 5 CODE HERE
+    feet = inches * 12 - (yards * 3);
+    yards = (feet * 3) - (miles * 1760);
+    miles = yards * 1760;
+    var div = document.getElementById("output5");
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
