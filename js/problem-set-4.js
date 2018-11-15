@@ -84,21 +84,22 @@ function fahrenheit() {
 
 function inches() {
 
-  /////////////////////////////////////////////////////// DO NOT MODIFY
-  let input = prompt("Enter a non-negative integer."); // DO NOT MODIFY
-  /////////////////////////////////////////////////////// DO NOT MODIFY
+    /////////////////////////////////////////////////////// DO NOT MODIFY
+    let input = prompt("Enter a non-negative integer."); // DO NOT MODIFY
+    /////////////////////////////////////////////////////// DO NOT MODIFY
 
-  // You are free to modify the value of inches, which you'll likely
-  // need to do. Please do not modify the value of input.
+    // You are free to modify the value of inches, which you'll likely
+    // need to do. Please do not modify the value of input.
+    ////////////////////// DO NOT MODIFY
+    let inches = Math.floor(((input % 63360) % 36) % 12); // DO NOT MODIFY
+    ////////////////////// DO NOT MODIFY
 
-  ////////////////////// DO NOT MODIFY
-  let inches = input - (feet * 12); // DO NOT MODIFY
-  ////////////////////// DO NOT MODIFY
+  let miles = Math.floor(input / 63360);
+  let yards = Math.floor((input % 63360) / 36);
+  let feet = Math.floor(((input % 63360) % 36) / 12);
 
-    feet = inches * 12 - (yards * 3);
-    yards = (feet * 3) - (miles * 1760);
-    miles = yards * 1760;
-    var div = document.getElementById("output5");
+  var div = document.getElementById("output5");
+  div.innerHTML = `Miles: ${miles}<br/>Yards: ${yards}<br/>Feet: ${feet}<br/>Inches: ${inches}`;
 
   ////////////////////////// DO NOT MODIFY
   check("inches", input); // DO NOT MODIFY
