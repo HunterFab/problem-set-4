@@ -120,10 +120,13 @@ function centimeters() {
   // likely need to do. Please do not modify the value of input.
 
   /////////////////////////// DO NOT MODIFY
-  let centimeters = input; // DO NOT MODIFY
-  /////////////////////////// DO NOT MODIFY
+  let centimeters = Math.floor((input % 100000) % 1000); // DO NOT MODIFY
+  ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 6 CODE HERE
+let kilometers = Math.floor(input / 100000);
+let meters = Math.floor((input % 100000) / 1000);
+var div = document.getElementById("output6");
+div.innerHTML = `Kilometers: ${kilometers}<br/>Meters: ${meters}<br/>Centimeters: ${centimeters}`;
 
   /////////////////////////////// DO NOT MODIFY
   check("centimeters", input); // DO NOT MODIFY
