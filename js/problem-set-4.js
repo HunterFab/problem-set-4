@@ -235,9 +235,19 @@ function change() {
   let amount = input; // DO NOT MODIFY
   ////////////////////// DO NOT MODIFY
 
-  // WRITE YOUR EXERCISE 10 CODE HERE
-
+  let quarters = Math.floor(amount * 100 / 25);
+  let dimes = Math.floor(amount * 100 % 25 / 10);
+  let nickels = Math.floor(amount * 100 % 25 % 10 / 5);
+  let pennies = Math.floor(amount * 100 % 25 % 10 % 5);
+  let coin = (quarters + dimes + nickels + pennies);
+  var div = document.getElementById("output10");
+  if (coin > 1) {
+    div.innerHTML = (coin + " coins.");
+  }
+  else {
+    div.innerHTML = (coin + " coin.")
+  }
   ////////////////////////// DO NOT MODIFY
   check("change", input); // DO NOT MODIFY
   ////////////////////////// DO NOT MODIFY
-}
+  }
